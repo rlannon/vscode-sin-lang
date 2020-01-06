@@ -1,0 +1,26 @@
+{
+    "name": "sin",
+    "description": "SIN source file",
+    "version": "0.0.1",
+    "publisher": "lannonriley",
+    "engines": {
+        "vscode": "^1.40.0"
+    },
+    "displayName": "SIN Syntax Highlighting",
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "sin",
+            "aliases": ["SIN", "sin"],
+            "extensions": [".sin"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "sin",
+            "scopeName": "source.sin",
+            "path": "./syntaxes/sin.tmLanguage.json"
+        }]
+    }
+}

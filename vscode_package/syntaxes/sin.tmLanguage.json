@@ -1,0 +1,110 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "SIN",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#typenames"
+		},
+		{
+			"include": "#qualifiers"
+		},
+		{
+			"include": "#variables"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.sin",
+					"match": "\\b(if|else|while|return)\\b"
+				},
+				{
+					"name": "keyword.operator.sin",
+					"match": "\\b(and|or|not)\\b"
+				},
+				{
+					"name": "keyword.other.sin",
+					"match": "\\b(alloc|let|def|decl)\\b"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.numeric.sin",
+					"match": "\\b(((0x)[0-9a-fA-F]+)|\\d+)\\b"
+				},
+				{
+					"name": "constant.language.sin",
+					"match": "\\b(true|false)\\b"
+				},
+				{
+					"name": "constant.character",
+					"match": "\\b'.'\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.sin",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.sin",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"name": "comment.line.double-slash",
+			"begin": "//",
+			"end": "(\n)|(\r\n)|(\r)"
+		},
+		"typenames": {
+			"patterns": [
+				{
+					"name": "storage.type",
+					"match": "\\b(void|byte|int|ptr|float|raw|char|string|array|struct)\\b"
+				}
+			]
+		},
+		"qualifiers": {
+			"patterns": [
+				{
+					"name": "storage.modifier",
+					"match": "\\b(signed|unsigned|static|dynamic|const|long|short)\\b"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "entity.name.function",
+					"begin": "\\b",
+					"end": "\\(",
+					"match": "[_a-zA-Z]+[_a-zA-Z0-9]?"
+				},
+				{
+					"name": "variable.parameter",
+					"begin": "\\(",
+					"end": "\\)",
+					"match": "[_a-zA-Z]+[_a-zA-Z0-9]?"
+				}
+			]
+		}
+	},
+	"scopeName": "source.sin"
+}
