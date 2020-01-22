@@ -85,7 +85,7 @@
 			"patterns": [
 				{
 					"name": "storage.modifier",
-					"match": "\\b(signed|unsigned|static|dynamic|const|long|short)\\b"
+					"match": "\\b(signed|unsigned|static|dynamic|const|final|long|short)\\b"
 				}
 			]
 		},
