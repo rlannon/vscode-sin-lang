@@ -49,11 +49,11 @@
 				},
 				{
 					"name": "constant.language.sin",
-					"match": "\\b(true|false)\\b"
+					"match": "\\b(true|false|null)\\b"
 				},
 				{
-					"name": "constant.character",
-					"match": "\\b'.'\\b"
+					"name": "constant.character.sin",
+					"match": "(\\\\n|\\\\t|\\\\r)"
 				}
 			]
 		},
@@ -77,7 +77,11 @@
 			"patterns": [
 				{
 					"name": "storage.type",
-					"match": "\\b(void|byte|int|ptr|float|raw|char|string|array|struct)\\b"
+					"match": "\\b(void|byte|bool|int|float|raw|char|string)\\b"
+				},
+				{
+					"name": "support.type",
+					"match": "\\b(struct|array|ptr)\\b"
 				}
 			]
 		},
@@ -85,7 +89,7 @@
 			"patterns": [
 				{
 					"name": "storage.modifier",
-					"match": "\\b(signed|unsigned|static|dynamic|const|final|long|short)\\b"
+					"match": "\\b(signed|unsigned|static|dynamic|const|constexpr|final|long|short)\\b"
 				}
 			]
 		},
