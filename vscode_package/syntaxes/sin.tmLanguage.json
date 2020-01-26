@@ -98,14 +98,17 @@
 				{
 					"name": "entity.name.function",
 					"begin": "\\b",
-					"end": "\\(",
-					"match": "[_a-zA-Z]+[_a-zA-Z0-9]?"
+					"end": "\\b",
+					"endCaptures": {
+						"0": {"name": "punctuation.paren.open"}
+					},
+					"match": "@?([_a-zA-Z]+[_a-zA-Z0-9]?)\\("
 				},
 				{
-					"name": "variable.parameter",
-					"begin": "\\(",
-					"end": "\\)",
-					"match": "[_a-zA-Z]+[_a-zA-Z0-9]?"
+					"name": "variable",
+					"begin": "\\b",
+					"end": "\\b",
+					"match": "([_a-zA-Z]+[_a-zA-Z0-9]?)"
 				}
 			]
 		}
