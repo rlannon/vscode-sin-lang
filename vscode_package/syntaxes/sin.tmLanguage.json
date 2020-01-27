@@ -37,7 +37,7 @@
 				},
 				{
 					"name": "keyword.other.sin",
-					"match": "\\b(alloc|let|def|decl|include)\\b"
+					"match": "\\b(alloc|free|let|def|decl|include)\\b"
 				}
 			]
 		},
