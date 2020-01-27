@@ -33,11 +33,11 @@
 				},
 				{
 					"name": "keyword.operator.sin",
-					"match": "\\b(and|or|not|xor|is)\\b"
+					"match": "\\b(and|or|not|xor|is|\\+|-|/|\\*|\\||&|\\^|%)\\b"
 				},
 				{
 					"name": "keyword.other.sin",
-					"match": "\\b(alloc|let|def|decl)\\b"
+					"match": "\\b(alloc|let|def|decl|include)\\b"
 				}
 			]
 		},
@@ -58,13 +58,28 @@
 			]
 		},
 		"strings": {
-			"name": "string.quoted.double.sin",
-			"begin": "\"",
-			"end": "\"",
 			"patterns": [
 				{
-					"name": "constant.character.escape.sin",
-					"match": "\\\\."
+					"name": "string.quoted.double.sin",
+					"begin": "\"",
+					"end": "\"",
+					"patterns": [
+						{
+							"name": "constant.character.escape.sin",
+							"match": "\\\\."
+						}
+					]
+				},
+				{
+					"name": "string.quoted.single",
+					"begin": "'",
+					"end": "'",
+					"patterns": [
+						{
+							"name": "constant.character.escape",
+							"match": "\\\\."
+						}
+					]
 				}
 			]
 		},
@@ -98,17 +113,17 @@
 				{
 					"name": "entity.name.function",
 					"begin": "\\b",
-					"end": "\\b",
-					"endCaptures": {
-						"0": {"name": "punctuation.paren.open"}
-					},
-					"match": "@?([_a-zA-Z]+[_a-zA-Z0-9]?)\\("
+					"end": "\\(",
+					"match": "(\\b([_a-zA-Z]+[_a-zA-Z0-9]?))(?=\\()"
 				},
 				{
 					"name": "variable",
 					"begin": "\\b",
 					"end": "\\b",
-					"match": "([_a-zA-Z]+[_a-zA-Z0-9]?)"
+					"match": "([_a-zA-Z]+[_a-zA-Z0-9]?)",
+					"beginCaptures": {
+						"0": { "name": "variable.name" }
+					}
 				}
 			]
 		}
