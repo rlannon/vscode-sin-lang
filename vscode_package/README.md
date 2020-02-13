@@ -1,10 +1,10 @@
 # SIN README
 
-This extension allows VSCode to be used as an IDE for the SIN programming language.
+This extension allows VSCode to be used as an IDE for the SIN programming language. Currently includes syntax highlighting.
 
 ## Features
 
-Currently, the only supported feature is syntax highlighting, but this will be improved and expanded upon as times goes on.
+Currently, the only supported feature is syntax highlighting, but this will be improved and expanded upon as time goes on.
 
 ## Requirements
 
@@ -20,4 +20,4 @@ The syntax highlighting isn't particularly good. The feature set is also very li
 
 ## Release Notes
 
-No notes, as there is only one release.
+Bug fixes.

@@ -114,13 +114,13 @@
 					"name": "entity.name.function",
 					"begin": "\\b",
 					"end": "\\(",
-					"match": "(\\b([_a-zA-Z]+[_a-zA-Z0-9]?))(?=\\()"
+					"match": "(\\b([_a-zA-Z][_a-zA-Z0-9]+))(?=\\()"
 				},
 				{
 					"name": "variable",
 					"begin": "\\b",
 					"end": "\\b",
-					"match": "([_a-zA-Z]+[_a-zA-Z0-9]?)",
+					"match": "([_a-zA-Z][_a-zA-Z0-9]+)",
 					"beginCaptures": {
 						"0": { "name": "variable.name" }
 					}
