@@ -57,7 +57,7 @@
 				},
 				{
 					"name": "constant.language.sin",
-					"match": "\\b(true|false|null)\\b"
+					"match": "\\b(true|false|null|len|size|var)\\b"
 				},
 				{
 					"name": "constant.character.sin",
