@@ -29,23 +29,19 @@
 			"patterns": [
 				{
 					"name": "keyword.control.sin",
-					"match": "\\b(if|else|while|return|asm)\\b"
+					"match": "\\b(if|else|while|return|asm|switch|case|default)\\b"
 				},
 				{
 					"name": "keyword.operator.sin",
-					"match": "\\b(and|or|not|xor|is|as|\\+|-|/|\\*|\\||&|\\^|%)\\b"
+					"match": "\\b(and|or|not|xor|is|as|\\+|-|/|\\*|\\||&|\\^|%|$|\\.)|(::)\\b"
 				},
 				{
 					"name": "keyword.other.sin",
-					"match": "\\b(alloc|let|def|decl|include)\\b"
+					"match": "\\b(alloc|let|def|decl|include|move)\\b"
 				},
 				{
 					"name": "invalid.deprecated",
 					"match": "\\bfree\\b"
-				},
-				{
-					"name": "support.type",
-					"match": "\\b(x86|x64|x86_64)\\b"
 				}
 			]
 		},
@@ -100,13 +96,13 @@
 			"patterns": [
 				{
 					"name": "storage.type",
-					"match": "\\b(void|byte|bool|int|float|raw|char|string|struct|array|ptr)\\b"
+					"match": "\\b(void|byte|bool|int|float|raw|char|string|struct|template|typename|array|ptr|proc)\\b"
 				},
 				{
 					"name": "entity.name.class",
 					"begin": "struct\\b",
 					"end": "\\{",
-					"match": "(?<=(struct\\s+))\\b([_a-zA-Z][_a-zA-Z0-9]*\\b)(?=\\s*\\{)"
+					"match": "(?<=(struct\\s+)|(template\\s+))\\b([_a-zA-Z][_a-zA-Z0-9]*\\b)(?=\\s*\\{)"
 				}
 			]
 		},
@@ -114,7 +110,7 @@
 			"patterns": [
 				{
 					"name": "storage.modifier",
-					"match": "\\b(signed|unsigned|static|dynamic|const|constexpr|final|long|short|c64|windows|sincall)\\b"
+					"match": "\\b(signed|unsigned|static|dynamic|const|constexpr|final|long|public|private|short|c64|windows|sincall)\\b"
 				}
 			]
 		},
@@ -140,6 +136,10 @@
 					"begin": "([_a-zA-Z][_a-zA-Z0-9]*) ?\\(",
 					"end": "\\)",
 					"match": ""
+				},
+				{
+					"name": "variable.language",
+					"match": "\\b(this)\\b"
 				}
 			]
 		}
