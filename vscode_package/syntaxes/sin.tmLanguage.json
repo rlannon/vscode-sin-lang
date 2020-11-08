@@ -29,15 +29,15 @@
 			"patterns": [
 				{
 					"name": "keyword.control.sin",
-					"match": "\\b(if|else|while|return|asm|switch|case|default)\\b"
+					"match": "\\b(if|else|while|return|asm|switch|case|default|call)\\b"
 				},
 				{
 					"name": "keyword.operator.sin",
-					"match": "\\b(and|or|not|xor|is|as|\\+|-|/|\\*|\\||&|\\^|%|$|\\.)|(::)\\b"
+					"match": "\\b(and|or|not|xor|is|as|@\\+|-|/|\\*|\\||&|\\^|%|$|\\.)|(::)\\b"
 				},
 				{
 					"name": "keyword.other.sin",
-					"match": "\\b(alloc|let|def|decl|include|move)\\b"
+					"match": "\\b(alloc|let|def|decl|include|move|constexpr)\\b"
 				},
 				{
 					"name": "invalid.deprecated",
@@ -110,7 +110,7 @@
 			"patterns": [
 				{
 					"name": "storage.modifier",
-					"match": "\\b(signed|unsigned|static|dynamic|const|constexpr|final|long|public|private|short|c64|windows|sincall)\\b"
+					"match": "\\b(signed|unsigned|static|dynamic|const|final|long|public|private|short|c64|windows|sincall|unmanaged)\\b"
 				}
 			]
 		},
