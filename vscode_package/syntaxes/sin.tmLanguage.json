@@ -96,7 +96,7 @@
 			"patterns": [
 				{
 					"name": "storage.type",
-					"match": "\\b(void|byte|bool|int|float|raw|char|string|struct|template|typename|array|ptr|proc)\\b"
+					"match": "\\b(void|byte|bool|int|float|raw|char|string|struct|template|typename|array|ptr|ref|proc)\\b"
 				},
 				{
 					"name": "entity.name.class",
