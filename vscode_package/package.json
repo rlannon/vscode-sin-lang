@@ -1,7 +1,7 @@
 {
     "name": "sin-language",
     "description": "Syntax highlighting for the SIN programming language",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "publisher": "lannonriley",
     "engines": {
         "vscode": "^1.40.0"

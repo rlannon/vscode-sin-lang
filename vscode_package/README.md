@@ -1,6 +1,6 @@
 # SIN README
 
-This extension allows VSCode to be used as an IDE for the SIN programming language. Currently includes syntax highlighting.
+This extension allows VSCode to be used as an IDE for the SIN programming language. Currently includes syntax highlighting, but future extensions will include a language server that allows for semantic highlighting as well as other useful features.
 
 ## Features
 
@@ -16,7 +16,7 @@ No settings are added with this extension for the time being.
 
 ## Known Issues
 
-The syntax highlighting isn't particularly good. The feature set is also very limited.
+The syntax highlighting isn't particularly good. The feature set is also very limited because there is currently no language server that allows for semantic highlighting. As a result, it is not always exactly right because it is based off of regex alone.
 
 ## Release Notes
 

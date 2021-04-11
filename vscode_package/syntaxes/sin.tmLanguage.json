@@ -37,7 +37,7 @@
 				},
 				{
 					"name": "keyword.other.sin",
-					"match": "\\b(alloc|let|def|decl|include|move|constexpr)\\b"
+					"match": "\\b(alloc|let|def|decl|include|move|constexpr|construct)\\b"
 				},
 				{
 					"name": "invalid.deprecated",
